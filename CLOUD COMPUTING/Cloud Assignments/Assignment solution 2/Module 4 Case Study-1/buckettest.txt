@@ -1,0 +1,21 @@
+### HOW TO CREATE A TEST SERVER INSIE NGINX THROUGH USERDATA
+
+#!/bin/bash
+
+# Update package list
+sudo apt update -y
+
+# Install Nginx (if not already installed)
+sudo apt install nginx -y
+
+# Start Nginx service
+sudo systemctl start nginx
+
+# Enable Nginx to start on boot
+sudo systemctl enable nginx
+
+# Create the directory /var/www/html/test
+sudo mkdir -p /var/www/html/test
+
+# Create a sample index.html file in the /test directory
+echo "<h1>this is a test server and hostname is $(hostname)/h1>" | sudo tee /var/www/html/test/index.html

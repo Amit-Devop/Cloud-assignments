@@ -1,0 +1,2 @@
+ 3. Route the traffic to the company’s domain.
+>>> Created hosted zone for the webserver, but as I don't have any registered domain so I could not complete the entire steps.
